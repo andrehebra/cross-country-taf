@@ -45,7 +45,7 @@
         {#if taf}
         {#if taf.fcsts}
             {#each taf.fcsts as forecast}
-                <p class="title">FROM {formatTimestamp(forecast.timeFrom * 1000)} TO {formatTimestamp(forecast.timeTo)}</p>
+                <p class="title">FROM {formatTimestamp(forecast.timeFrom * 1000)} TO {formatTimestamp(forecast.timeTo * 1000)}</p>
                 <p>WIND {forecast.wdir} AT {forecast.wspd} {#if forecast.wgst} GUSTING {forecast.wgst}{/if}</p>
                 <p>VISIBILITY {forecast.visib}</p>
                 {#each forecast.clouds as clouds}
